@@ -11,8 +11,8 @@ class MyBot(ActivityHandler):
 
     async def on_message_activity(self, turn_context: TurnContext):
         message = turn_context.activity.text
-        if (message.lower() == 'help' or message.lower() == 'enquire'):
-            await turn_context.send_activity('Ok this what I can assist you with \n 1. Space \n 2. Our Communuity')
+        if (message.lower() == 'help' or message.lower() == 'inquire'):
+            await turn_context.send_activity('Ok this is what I can assist you with \n 1. Space \n 2. Our Communuity')
         elif (message.lower() == 'space'):
             basic_space = space.basic_space()
             await turn_context.send_activity('For Co-Working Spaces the following is available: \n 1. %s which costs %s' % (str(basic_space['title']), str(basic_space['cost'])))
