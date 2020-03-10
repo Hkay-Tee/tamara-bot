@@ -19,7 +19,7 @@ class MyBot(ActivityHandler):
         elif (re.search('thanks', message.lower())):
             await turn_context.send_activity('You welcome ')
         else:
-            await turn_context.send_activity('OK, sorry I could not get that try texting "help" or "enquire"')
+            await turn_context.send_activity('OK, sorry I could not get that try texting "help" or "inquire"')
 
     async def on_members_added_activity(
         self,
