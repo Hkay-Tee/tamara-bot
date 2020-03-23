@@ -22,7 +22,6 @@ class MyBot(ActivityHandler):
  
 
     async def services_offered(self, turn_context: TurnContext):
-
         response = MessageFactory.text("Here we are offering the following Services: ")
 
         response.suggested_actions = SuggestedActions(
@@ -36,8 +35,8 @@ class MyBot(ActivityHandler):
 
 
     async def space_services(self, turn_context: TurnContext):
-        basic_space = space.basic_space()  
-        await turn_context.send_activity('For Co-Working Spaces the following is available: \n 1. %s which costs %s' % (str(basic_space['title']), str(basic_space['cost'])))  
+        #basic_space = space.basic_space()  
+        #await turn_context.send_activity('For Co-Working Spaces the following is available: \n 1. %s which costs %s' % (str(basic_space['title']), str(basic_space['cost'])))  
         return await self.services_offered(turn_context)
 
     async def on_message_activity(self, turn_context: TurnContext):
